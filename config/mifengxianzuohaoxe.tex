@@ -1,0 +1,34 @@
+\newsavebox{\zdxa}
+\newsavebox{\zdxb}
+\sbox{\zdxa}{\kaishu{}
+\large
+学校\raisebox{-2pt}{\rule{35mm}{0.4pt}}%
+班级\raisebox{-2pt}{\rule{35mm}{0.4pt}}%
+姓名\raisebox{-2pt}{\rule{35mm}{0.4pt}}%
+考场\raisebox{-2pt}{\rule{35mm}{0.4pt}}%
+考号\raisebox{-2pt}{\rule{35mm}{0.4pt}}
+}
+\sbox{\zdxb}{\large\kaishu{}
+........................................\raisebox{-0.5ex}{装}%
+........................................\raisebox{-0.5ex}{订}%
+........................................\raisebox{-0.5ex}{线}%
+........................................}
+\fancyfoot[OL]{
+\begin{picture}(1,1)
+\put(-95,340){\rotatebox[origin=c]{90}{\usebox{\zdxa}}}
+\put(-30,340){\rotatebox[origin=c]{90}{\usebox{\zdxb}}}
+\put(790,-60){\raisebox{14.5ex}[3\height]{\zuohao}}
+\end{picture}}
+\fancyfoot[ER]{
+\begin{picture}(1,1)
+\put(20,340){\rotatebox[origin=c]{-90}{\usebox{\zdxb}}}
+\end{picture}}
+\fancyfoot[CE,CO]{\raisebox{2ex}[3\height]{{\kaishu{}第}\thepage{\kaishu{}页}~~~{\kaishu{}共}\pageref{LastPage}~{\kaishu{}页}}}
+\setlength{\columnseprule}{0.4pt}
+
+\newcommand{\zuohao}{\kaishu{}
+     %\setlength{\tabcolsep}{2mm}
+     \begin{tabular}{|c|c|}
+         \multicolumn{2}{l}{}\\
+         \hline \raisebox{-1.5ex}[-5\height]{座号}&~~~~~~~~  \\[5mm]\hline
+\end{tabular}}

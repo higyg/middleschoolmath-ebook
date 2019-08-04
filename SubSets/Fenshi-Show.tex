@@ -1,0 +1,17 @@
+% !Mode:: "TeX:UTF-8"
+% 使用xelatex
+\begin{center}
+\section*{题库}
+\end{center}
+
+\begin{enumerate}
+\foreachproblem{\item\label{prob:\thisproblemlabel}\thisproblem}
+\end{enumerate}
+
+\newpage
+\showanswers
+\section*{参考答案}
+\begin{itemize}
+\foreachdataset{\thisdataset}{%
+\foreachproblem[\thisdataset]{\item[\ref{prob:\thisproblemlabel}.]\thisproblem}}
+\end{itemize}

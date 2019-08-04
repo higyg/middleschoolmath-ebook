@@ -1,0 +1,205 @@
+\documentclass[10pt,twoside,fleqn]{ctexart}
+\usepackage{geometry}
+\usepackage{examanswersheet,caption2,pifont}
+\Nomifengxian
+\usepackage{enumitem,bbding}
+% \setenumerate[1]{itemsep=5pt,partopsep=0pt,parsep=\parskip,topsep=0pt,leftmargin=2em}
+\setitemize[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=0pt}
+\setdescription{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=0pt}
+\setlist[enumerate,1]{label=\arabic*.,leftmargin=2em,itemsep=0pt}
+\setlist[enumerate,2]{label=(\arabic*),leftmargin=1em,itemsep=0pt}
+\newlist{choices}{enumerate}{3}
+\setlist[choices]{noitemsep,label=\Alph*.}
+\newlist{questions}{enumerate}{3}
+\setlist[questions]{noitemsep}
+\setlist[questions,1]{label=\arabic*.}
+\setlist[questions,2]{label=(\arabic*)}
+
+\usepackage{mathptmx}
+\punctstyle{banjiao}
+\usepackage{subfigure}
+\graphicspath{{figure/}{ItemBankfigures/}}
+\usepackage{epstopdf}
+\epstopdfsetup{suffix={}}
+
+
+\makeatletter
+\providecommand*\input@path{}
+\newcommand\addinputpath[1]{
+\expandafter\def\expandafter\input@path
+\expandafter{\input@path{#1}}}
+\addinputpath{ItemBankBody/}
+\makeatother
+
+\renewcommand*{\le}{\leqslant}
+\renewcommand*{\ge}{\geqslant}
+
+\usepackage[colorlinks,linkcolor=blue,anchorcolor=black,citecolor=blue]{hyperref}
+
+\xeCJKsetcharclass{`①}{`⑩}{1}
+% \setlength\lineskip{6pt}
+\setlength\lineskiplimit{1pt}
+\setlength\lineskip{3pt}
+
+\usepackage[draft]{probsoln}
+% \usepackage[final]{probsoln}
+\SetStartYear{2019}
+\PSNrandseed{\GetStartYear}
+\PSNrandseed{0502}
+% \showanswers
+\ClearUsedFile{excluded}
+% \loadallproblems{ItemBankBody/T16-01}
+% \loadallproblems{ItemBankBody/T16-02}
+% \loadallproblems{ItemBankBody/T16-03}
+% \loadallproblems{ItemBankBody/T16-04}
+
+% \loadselectedproblems[T16-A01]{T16-A01-01}{T16-01}
+% \loadselectedproblems[T16-A02]{fenshi:huajianqiuzhi4}{fenshi}
+% \loadselectedproblems[T16-B01]{T16-A01-07}{T16-01}
+% \loadselectedproblems[T16-B02]{T16-A02-02}{T16-02}
+% \loadselectedproblems[T16-C01]{T16-A03-02}{T16-03}
+% \loadselectedproblems[T16-C02]{T16-A03-05}{T16-03}
+% \loadselectedproblems[T16-D01]{T16-A05-04}{T16-05}
+% \loadselectedproblems[T16-E01]{T16-A06-02}{T16-06}
+
+\loadselectedproblems[T16-1]{T16-A01-01}{T16-01}
+\loadselectedproblems[T16-2]{T16-A01-02}{T16-01}
+\loadselectedproblems[T16-3]{T16-A02-01}{T16-02}
+\loadselectedproblems[T16-4]{T16-A03-01}{T16-03}
+\loadselectedproblems[T16-5]{T16-A03-02}{T16-03}
+\loadselectedproblems[T16-6]{T16-A05-01}{T16-05}
+\loadselectedproblems[T16-7]{T16-A04-01}{T16-04}
+\loadselectedproblems[T16-8]{T16-A06-01}{T16-06}
+
+
+% \loadselectedproblems[fenshi:huajianqiuzhi9]{fenshi:huajianqiuzhi9}{fenshi}
+
+\begin{document}
+% \begin{multicols}{3}
+\begin{center}
+{\kaishu\zihao{-2}计算专题训练}
+\end{center}
+% \renewcommand\baselinestretch{1.3}
+% \setlist{noitemsep}
+
+
+{\heiti 学习目标}
+\begin{enumerate}
+\item
+熟练进行整式和分式的相关运算;
+
+\item
+根据题目要求, 能准确地进行代数式求值.
+\end{enumerate}
+
+{\heiti 知识点睛}
+
+\begin{enumerate}
+% \item 基本运算操作规程
+
+% 看结构，分部分；依法则，不跳步；警异常，巧检验．
+
+% 检验原则：{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}．
+
+
+\item 解方程的依据是{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}；解多元方程组的基本思路是{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}；\\
+解高次方程的基本思路是{\_}{\_}{\_}{\_}{\_}{\_}{\_}．\\
+分式方程先转化为{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}，结果必须{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}．
+\item 解不等式的依据是{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}；\\
+解不等式的基本思路是转化为{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}{\_}；\\
+求解集时，常借助{\_}{\_}{\_}{\_}{\_}{\_}{\_}找公共部分．
+\item 综合运算问题的处理思路：
+①分析问题，明确目标；
+②观察结构，分析特征；
+③边运算，边调整．
+
+注：显性条件：正整数、负整数、无解、增根等．
+
+隐性条件：由定义、性质、指代不明等造成的范围限制．
+
+如：$\dfrac{1}{a}$中$a\ne $0；$\sqrt a $中$a\ge $0；不等式$ax<b$的解集为$x>1$，隐含$a<0$，且$a$与$b$同号；一元二次方程使用$\Delta $时，要保证二次项系数不为0．
+\end{enumerate}
+
+% \noindent%
+{\heiti 精讲精练}
+
+\begin{enumerate}
+\foreachproblem[T16-1]{\item\label{prob:\thisproblemlabel}\thisproblem}\vfill\null
+\foreachproblem[T16-2]{\item\label{prob:\thisproblemlabel}\thisproblem}\vfill\null\newpage
+\foreachproblem[T16-3]{\item\label{prob:\thisproblemlabel}\thisproblem}\vfill\null
+\foreachproblem[T16-4]{\item\label{prob:\thisproblemlabel}\thisproblem}\vfill\null\newpage
+\foreachproblem[T16-5]{\item\label{prob:\thisproblemlabel}\thisproblem}\vfill\null
+\foreachproblem[T16-6]{\item\label{prob:\thisproblemlabel}\thisproblem}\vfill\null\newpage
+\foreachproblem[T16-7]{\item\label{prob:\thisproblemlabel}\thisproblem}\vfill
+\foreachproblem[T16-8]{\item\label{prob:\thisproblemlabel}\thisproblem}\vfill\null
+
+\end{enumerate}
+
+
+% \noindent%
+% {\heiti 精讲}
+
+% \begin{enumerate}
+% \foreachproblem[T16-C01]{\item{(\kaishu\zihao{-5}{错误原因分析})}\label{prob:\thisproblemlabel}\thisproblem}
+% \vfill\newpage
+
+% \foreachproblem[T16-A01]{\item{(\kaishu\zihao{-5}{取值说理，与不等式结合})}\label{prob:\thisproblemlabel}\thisproblem}
+% \vfill\null
+
+% \foreachproblem[T16-B01]{\item{(\kaishu\zihao{-5}{取值说理，与方程结合})}\label{prob:\thisproblemlabel}\thisproblem}
+% \vfill\null
+
+
+
+
+% \foreachproblem[T16-E01]{\item{(\kaishu\zihao{-5}{与其他知识的综合})}\label{prob:\thisproblemlabel}\thisproblem}
+% \vfill\null
+
+% \end{enumerate}
+
+
+% \newpage
+% \noindent%
+% {\heiti 精练}
+
+% \begin{enumerate}
+% \foreachproblem[T16-C02]{\item\label{prob:\thisproblemlabel}\thisproblem}
+% % \vfill
+
+% \foreachproblem[T16-B02]{\item\label{prob:\thisproblemlabel}\thisproblem}
+% \vfill\null
+% \newpage
+% \foreachproblem[T16-A02]{\item\label{prob:\thisproblemlabel}\thisproblem}
+% \vfill\null
+
+% % {(\kaishu\zihao{-5}{无取值说理、直接代入})}
+% \foreachproblem[T16-D01]{\item\label{prob:\thisproblemlabel}\thisproblem}
+% \vfill\null
+
+% % \foreachproblem[T16-D01]{\item{(\kaishu\zihao{-5}{无取值说理、直接代入})}\label{prob:\thisproblemlabel}\thisproblem}
+% % \vfill\null
+% % \foreachproblem[T16-E01]{\item{(\kaishu\zihao{-5}{与其他知识的综合})}\label{prob:\thisproblemlabel}\thisproblem}
+% % \vfill\null
+
+% \end{enumerate}
+
+
+
+
+
+\newpage
+\showanswers
+\section*{参考答案}
+\begin{enumerate}
+\foreachdataset{\thisdataset}{%
+\foreachproblem[\thisdataset]{\item[\ref{prob:\thisproblemlabel}]\thisproblem}}
+\end{enumerate}
+
+
+
+
+% \raggedcolumns
+% \flushcolumns
+
+% \end{multicols}
+\end{document}

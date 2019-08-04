@@ -1,0 +1,33 @@
+\section*{专题复习}
+\zihao{3}
+
+
+\begin{enumerate}
+\foreachproblem[leibiyimo]{\newpage\item\label{prob:\thisproblemlabel}\thisproblem}
+% \foreachproblem[fenshi:equation]{\item \thisproblem}
+\end{enumerate}
+
+\begin{enumerate}
+\foreachproblem[leibiermo]{\newpage\item\label{prob:\thisproblemlabel}\thisproblem}
+% \foreachproblem[fenshi:equation]{\item \thisproblem}
+\end{enumerate}
+
+
+\begin{enumerate}
+\foreachproblem[leibizhongkao]{\newpage\item\label{prob:\thisproblemlabel}\thisproblem}
+% \foreachproblem[fenshi:equation]{\item \thisproblem}
+\end{enumerate}
+
+\begin{enumerate}
+\foreachproblem[leibi]{\newpage\item\label{prob:\thisproblemlabel}\thisproblem}
+% \foreachproblem[fenshi:equation]{\item \thisproblem}
+\end{enumerate}
+
+
+\newpage
+\showanswers
+\section*{参考答案}
+\begin{itemize}
+\foreachdataset{\thisdataset}{%
+\foreachproblem[\thisdataset]{\item[\ref{prob:\thisproblemlabel}.]\thisproblem}}
+\end{itemize}

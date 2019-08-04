@@ -1,0 +1,115 @@
+% !Mode:: "TeX:UTF-8"
+% 使用xelatex
+\documentclass[UTF8,fleqn]{ctexart}
+\usepackage[draft]{probsoln}
+\usepackage{enumitem}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage[a4paper,scale=.8,centering]{geometry}
+\usepackage{multido}
+\usepackage{amsmath}
+\usepackage{amssymb,amsthm,bbding}
+\usepackage{graphicx}
+\graphicspath{{ItemBankfigures/}}
+\punctstyle{banjiao}
+\makeatletter
+\providecommand*\input@path{}
+\newcommand\addinputpath[1]{
+\expandafter\def\expandafter\input@path
+\expandafter{\input@path{#1}}}
+\addinputpath{ItemBankBody/}
+\makeatother
+\xeCJKsetcharclass{`①}{`⑩}{1}
+\renewcommand*{\le}{\leqslant}
+\renewcommand*{\ge}{\geqslant}
+\setlength\lineskip{6pt}
+\usepackage[colorlinks,linkcolor=blue,anchorcolor=black,citecolor=blue]{hyperref}
+
+
+\setlist[enumerate,2]{label=(\arabic*),leftmargin=1em}
+\newlist{choices}{enumerate}{3}
+\setlist[choices]{noitemsep,label=\Alph*.}
+\newlist{questions}{enumerate}{3}
+\setlist[questions]{noitemsep}
+\setlist[questions,1]{label=\arabic*.}
+\setlist[questions,2]{label=(\arabic*)}
+
+% uncomment the following line to display the answers
+%\showanswers
+
+% Set the academic year to be 2011/12 (if omitted assume current
+% academic year):
+\SetStartYear{2019}
+
+% Set the seed for the random number generator:
+\PSNrandseed{\GetStartYear}
+\PSNrandseed{0502}
+
+% Exclude problems that have been used this year or the previous
+% two academic years. (Creates a file called 'excluded.tex' to
+% store labels of used problems. Also creates a file called
+% \jobname.prb that stores labels of problems used in this 
+% document, so they don't get excluded on subsequent runs.)
+% \ExcludePreviousFile[3]{excluded}
+
+% To clear the used problems file (\jobname.prb) of the labels 
+% generated in the previous run, comment the above and uncomment
+% below:
+\ClearUsedFile{excluded}
+
+% Load 1 problem randomly selected from the given file
+% and store in database 'firstprinciples':
+% \loadrandomproblems{4}{ItemBankBody/T16-01,ItemBankBody/T16-02,ItemBankBody/T16-03}
+\loadallproblems{ItemBankBody/T16-01}
+\loadallproblems{ItemBankBody/T16-02}
+\loadallproblems{ItemBankBody/T16-03}
+\loadallproblems{ItemBankBody/T16-04}
+\loadallproblems{ItemBankBody/T16-05}
+\loadallproblems{ItemBankBody/T16-06}
+\loadallproblems{fenshi}
+% \loadallproblems{ItemBankBody/T22-01}%类比探究之旋转结构
+% \loadallproblems{ItemBankBody/T22-03}%类比探究之中点结构
+% \loadallproblems{ItemBankBody/T22-02}
+
+% \loadselectedproblems[leibiyimo]{T22-A01-02,T22-A01-03}{T22-01}
+% \loadselectedproblems[leibiermo]{T22-A01-11,T22-A01-12}{T22-01}
+% \loadselectedproblems[leibizhongkao]{T22-A01-09,T22-A01-10,T22-A01-13}{T22-01}
+
+% \loadexceptproblems[leibi]{T22-A01-02,T22-A01-03,T22-A01-09,T22-A01-10}{T22-01}
+
+
+% \multido{\nn=1+1}{40}{\loadselectedproblems[fenshi:equation]{fenshi:equation\nn}{fenshi}}
+% tiku/\ifnum \nm<10 0\nm \else \nm \fi}
+
+
+% \title{题库}
+% \author{初中数学}
+% \maketitle
+\begin{document}
+% !Mode:: "TeX:UTF-8"
+% 使用xelatex
+\begin{center}
+\section*{题库}
+\end{center}
+
+
+
+% \showanswers
+\begin{enumerate}
+% \foreachproblem[leibiyimo]{\item\label{prob:\thisproblemlabel}\thisproblem}
+% \foreachproblem[leibiermo]{\item\label{prob:\thisproblemlabel}\thisproblem}
+% \foreachproblem[leibizhongkao]{\item\label{prob:\thisproblemlabel}\thisproblem}
+% \useproblem{T16-A01-02}
+\foreachproblem{\item\label{prob:\thisproblemlabel}\thisproblem}
+\end{enumerate}
+
+% \newpage
+% \showanswers
+% \section*{参考答案}
+% \begin{itemize}
+% \foreachdataset{\thisdataset}{%
+% \foreachproblem[\thisdataset]{\item[\ref{prob:\thisproblemlabel}.]\thisproblem}}
+% \end{itemize}
+
+
+\end{document}
