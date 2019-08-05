@@ -1,5 +1,7 @@
 ## Core latex/pdflatex auxiliary files:
 *.aux
+*.prb
+excluded.tex
 *.lof
 *.log
 *.lot
