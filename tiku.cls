@@ -409,7 +409,7 @@
 \maketitle
 }
 
-\iffalse
+%\iffalse
 \AtEndDocument{%
 \clearpage
 \renewcommand*{\solutionname}{答案}
@@ -424,4 +424,4 @@
 }
 \end{enumerate}
 }
-\fi
+%\fi
