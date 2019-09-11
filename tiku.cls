@@ -399,17 +399,29 @@
 	\@ifnextchar\bgroup
 	{\xx@ii@helper{#1}{#2}}{\xx@i{#1}{#2}}}
 
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[CE,CO]{-- \thepage~--}
+
 \AtBeginDocument{%
 \maketitle
 }
 
+\iffalse
 \AtEndDocument{%
 \clearpage
 \renewcommand*{\solutionname}{答案}
 \showanswers
 \section*{参考答案}
 \begin{enumerate}
-\foreachdataset{\thisdataset}{%
-\foreachproblem[\thisdataset]{\item[\ref{prob:\thisproblemlabel}.]\thisproblem}}
-\end{enumerate}%
+\foreachproblem{%
+\item\hideanswers%
+\thisproblem%
+\par
+\showanswers\thisproblem
 }
+\end{enumerate}
+}
+\fi
